@@ -1,11 +1,11 @@
-// Animación al aparecer las secciones
+// Animaciones al aparecer las secciones
 
 const secciones = document.querySelectorAll("section");
 
 
-function mostrar(){
+function mostrarSecciones(){
 
-    secciones.forEach((seccion)=>{
+    secciones.forEach(seccion => {
 
         const posicion = seccion.getBoundingClientRect().top;
 
@@ -23,19 +23,25 @@ function mostrar(){
 }
 
 
-window.addEventListener("scroll", mostrar);
+window.addEventListener("scroll", mostrarSecciones);
 
 
-mostrar();
+mostrarSecciones();
 
 
 
 // Mensaje de bienvenida
 
-window.onload = function(){
-
 console.log(
 "🌾 Bienvenido a Quinova - Nutrición que nace de los Andes"
 );
+
+
+
+// Efecto al cargar la página
+
+window.onload = () => {
+
+    document.body.style.opacity = "1";
 
 };
