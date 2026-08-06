@@ -1,143 +1,152 @@
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial, sans-serif;
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',Arial,sans-serif;
 }
 
 html{
-    scroll-behavior:smooth;
+scroll-behavior:smooth;
 }
 
 body{
-    background:#f8f3e8;
-    color:#333;
+background:#f8f3e8;
+color:#333;
 }
 
 
-/* MENÚ */
+/* MENU */
 
 .navbar{
 
-    width:90%;
-    margin:20px auto;
-    padding:15px 30px;
+position:fixed;
+top:20px;
+left:50%;
+transform:translateX(-50%);
 
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
+width:90%;
 
-    background:white;
-    border-radius:20px;
+display:flex;
+justify-content:space-between;
+align-items:center;
 
-    box-shadow:0 5px 20px rgba(0,0,0,0.1);
+padding:15px 30px;
+
+background:rgba(255,255,255,0.9);
+
+border-radius:25px;
+
+box-shadow:0 10px 25px rgba(0,0,0,.15);
+
+z-index:1000;
 
 }
 
 
 .logo h1{
 
-    color:#2e7d32;
-    font-size:30px;
+color:#2e7d32;
 
 }
 
 
 .navbar ul{
 
-    display:flex;
-    gap:25px;
-    list-style:none;
+display:flex;
+gap:20px;
+
+list-style:none;
 
 }
 
 
 .navbar a{
 
-    text-decoration:none;
-    color:#2e7d32;
-    font-weight:bold;
-
-    transition:.3s;
+text-decoration:none;
+color:#2e7d32;
+font-weight:bold;
 
 }
 
 
 .navbar a:hover{
 
-    color:#d4a017;
+color:#d4a017;
 
 }
 
 
 
-/* INICIO */
+
+/* PORTADA */
 
 .inicio{
 
-    height:90vh;
+height:100vh;
 
-    display:flex;
-    justify-content:center;
-    align-items:center;
+display:flex;
+justify-content:center;
+align-items:center;
 
-    text-align:center;
+text-align:center;
 
-    background:
+background:
 
-    linear-gradient(
-    rgba(0,0,0,.45),
-    rgba(0,0,0,.45)
-    ),
+linear-gradient(
+rgba(0,0,0,.45),
+rgba(0,0,0,.45)
+),
 
-    url("img/portada.jpg");
+url("img/portada.jpg");
 
-    background-size:cover;
-    background-position:center;
+background-size:cover;
 
-    color:white;
+background-position:center;
 
-}
+color:white;
 
-
-.contenido{
-
-    max-width:700px;
+padding:20px;
 
 }
+
 
 
 .contenido h2{
 
-    font-size:55px;
-    margin-bottom:20px;
+font-size:55px;
+
+margin-bottom:20px;
 
 }
+
 
 
 .contenido p{
 
-    font-size:20px;
-    margin-bottom:30px;
+font-size:20px;
+
+margin-bottom:30px;
 
 }
+
 
 
 .contenido a{
 
-    background:#d4a017;
+background:#d4a017;
 
-    color:white;
+color:white;
 
-    padding:15px 30px;
+padding:15px 30px;
 
-    border-radius:30px;
+border-radius:30px;
 
-    text-decoration:none;
+text-decoration:none;
 
-    font-weight:bold;
+font-weight:bold;
 
 }
+
 
 
 
@@ -146,85 +155,136 @@ body{
 
 section{
 
-    padding:80px 10%;
+padding:90px 10%;
 
 }
+
 
 
 section h2{
 
-    text-align:center;
+text-align:center;
 
-    color:#2e7d32;
+font-size:38px;
 
-    font-size:35px;
+color:#2e7d32;
 
-    margin-bottom:30px;
+margin-bottom:40px;
 
 }
+
 
 
 section p{
 
-    text-align:center;
+text-align:center;
 
-    font-size:18px;
+line-height:1.8;
 
-    line-height:1.6;
+font-size:18px;
 
 }
 
 
 
-/* PRODUCTOS */
+
+
+/* TARJETAS */
 
 
 .tarjetas{
 
-    display:flex;
+display:flex;
 
-    justify-content:center;
+justify-content:center;
 
-    gap:25px;
+gap:30px;
 
-    flex-wrap:wrap;
+flex-wrap:wrap;
 
 }
+
 
 
 .tarjeta{
 
-    background:white;
+background:white;
 
-    width:280px;
+width:280px;
 
-    padding:30px;
+padding:25px;
 
-    border-radius:20px;
+border-radius:20px;
 
-    text-align:center;
+text-align:center;
 
-    box-shadow:0 8px 20px rgba(0,0,0,.1);
+box-shadow:0 10px 25px rgba(0,0,0,.12);
 
-    transition:.3s;
+transition:.4s;
 
 }
+
 
 
 .tarjeta:hover{
 
-    transform:translateY(-10px);
+transform:translateY(-12px);
 
 }
 
 
-.tarjeta h3{
 
-    color:#2e7d32;
+.tarjeta img{
 
-    margin-bottom:15px;
+width:100%;
+
+border-radius:15px;
+
+margin-bottom:15px;
 
 }
+
+
+
+
+/* GALERIA */
+
+
+.galeria{
+
+display:flex;
+
+justify-content:center;
+
+gap:25px;
+
+flex-wrap:wrap;
+
+}
+
+
+
+.galeria img{
+
+width:350px;
+
+border-radius:20px;
+
+box-shadow:0 10px 25px rgba(0,0,0,.15);
+
+transition:.4s;
+
+}
+
+
+
+.galeria img:hover{
+
+transform:scale(1.05);
+
+}
+
+
 
 
 
@@ -233,12 +293,46 @@ section p{
 
 footer{
 
-    background:#1b5e20;
+background:#1b5e20;
 
-    color:white;
+color:white;
 
-    padding:25px;
+padding:25px;
 
-    text-align:center;
+text-align:center;
+
+}
+
+
+
+/* CELULAR */
+
+
+@media(max-width:800px){
+
+.navbar{
+
+flex-direction:column;
+
+gap:15px;
+
+}
+
+
+.navbar ul{
+
+flex-wrap:wrap;
+
+justify-content:center;
+
+}
+
+
+.contenido h2{
+
+font-size:35px;
+
+}
+
 
 }
