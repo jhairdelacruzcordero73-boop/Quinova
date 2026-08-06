@@ -1,1 +1,244 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
 
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#f8f3e8;
+    color:#333;
+}
+
+
+/* MENÚ */
+
+.navbar{
+
+    width:90%;
+    margin:20px auto;
+    padding:15px 30px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    background:white;
+    border-radius:20px;
+
+    box-shadow:0 5px 20px rgba(0,0,0,0.1);
+
+}
+
+
+.logo h1{
+
+    color:#2e7d32;
+    font-size:30px;
+
+}
+
+
+.navbar ul{
+
+    display:flex;
+    gap:25px;
+    list-style:none;
+
+}
+
+
+.navbar a{
+
+    text-decoration:none;
+    color:#2e7d32;
+    font-weight:bold;
+
+    transition:.3s;
+
+}
+
+
+.navbar a:hover{
+
+    color:#d4a017;
+
+}
+
+
+
+/* INICIO */
+
+.inicio{
+
+    height:90vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    background:
+
+    linear-gradient(
+    rgba(0,0,0,.45),
+    rgba(0,0,0,.45)
+    ),
+
+    url("img/portada.jpg");
+
+    background-size:cover;
+    background-position:center;
+
+    color:white;
+
+}
+
+
+.contenido{
+
+    max-width:700px;
+
+}
+
+
+.contenido h2{
+
+    font-size:55px;
+    margin-bottom:20px;
+
+}
+
+
+.contenido p{
+
+    font-size:20px;
+    margin-bottom:30px;
+
+}
+
+
+.contenido a{
+
+    background:#d4a017;
+
+    color:white;
+
+    padding:15px 30px;
+
+    border-radius:30px;
+
+    text-decoration:none;
+
+    font-weight:bold;
+
+}
+
+
+
+/* SECCIONES */
+
+
+section{
+
+    padding:80px 10%;
+
+}
+
+
+section h2{
+
+    text-align:center;
+
+    color:#2e7d32;
+
+    font-size:35px;
+
+    margin-bottom:30px;
+
+}
+
+
+section p{
+
+    text-align:center;
+
+    font-size:18px;
+
+    line-height:1.6;
+
+}
+
+
+
+/* PRODUCTOS */
+
+
+.tarjetas{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:25px;
+
+    flex-wrap:wrap;
+
+}
+
+
+.tarjeta{
+
+    background:white;
+
+    width:280px;
+
+    padding:30px;
+
+    border-radius:20px;
+
+    text-align:center;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.1);
+
+    transition:.3s;
+
+}
+
+
+.tarjeta:hover{
+
+    transform:translateY(-10px);
+
+}
+
+
+.tarjeta h3{
+
+    color:#2e7d32;
+
+    margin-bottom:15px;
+
+}
+
+
+
+/* FOOTER */
+
+
+footer{
+
+    background:#1b5e20;
+
+    color:white;
+
+    padding:25px;
+
+    text-align:center;
+
+}
