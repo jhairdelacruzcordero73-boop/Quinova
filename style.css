@@ -334,5 +334,26 @@ font-size:35px;
 
 }
 
+/* ANIMACIONES */
+
+section{
+
+opacity:0;
+
+transform:translateY(50px);
+
+transition:1s ease;
+
+}
+
+
+section.mostrar{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
 
 }
