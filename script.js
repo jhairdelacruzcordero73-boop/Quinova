@@ -1,22 +1,20 @@
-
-// Animación al aparecer elementos
+// Animación al aparecer las secciones
 
 const secciones = document.querySelectorAll("section");
 
 
-function mostrarSecciones(){
+function mostrar(){
 
-    secciones.forEach(seccion => {
+    secciones.forEach((seccion)=>{
 
         const posicion = seccion.getBoundingClientRect().top;
 
-        const alturaPantalla = window.innerHeight;
+        const pantalla = window.innerHeight;
 
 
-        if(posicion < alturaPantalla - 100){
+        if(posicion < pantalla - 100){
 
-            seccion.style.opacity = "1";
-            seccion.style.transform = "translateY(0)";
+            seccion.classList.add("mostrar");
 
         }
 
@@ -25,26 +23,19 @@ function mostrarSecciones(){
 }
 
 
-window.addEventListener("scroll", mostrarSecciones);
+window.addEventListener("scroll", mostrar);
 
 
-
-secciones.forEach(seccion => {
-
-    seccion.style.opacity = "0";
-
-    seccion.style.transform = "translateY(50px)";
-
-    seccion.style.transition = "0.8s ease";
-
-});
-
-
-
-mostrarSecciones();
+mostrar();
 
 
 
 // Mensaje de bienvenida
 
-console.log("🌾 Bienvenido a Quinova - Nutrición que nace de los Andes");
+window.onload = function(){
+
+console.log(
+"🌾 Bienvenido a Quinova - Nutrición que nace de los Andes"
+);
+
+};
