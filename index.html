@@ -1,372 +1,574 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Quinova - Nutrición que nace de los Andes. Productos deliciosos elaborados a base de quinua.">
+    <meta name="keywords" content="Quinova, quinua, postres de quinua, productos andinos, emprendimiento">
 
-<title>Quinova | Nutrición que nace de los Andes</title>
+    <title>Quinova | Nutrición que nace de los Andes</title>
 
-<link rel="stylesheet" href="style.css">
-
+    <link rel="icon" type="image/png" href="img/logo.png">
+    <link rel="stylesheet" href="style.css">
 </head>
-
 
 <body>
 
+<header class="header">
 
-<header>
+    <nav class="navbar">
 
-<nav class="navbar">
+        <a href="#inicio" class="logo">
+            <img src="img/logo.png" alt="Logo Quinova">
+            <span>QUINOVA</span>
+        </a>
 
-<div class="logo">
-<h1>🌾 QUINOVA</h1>
-</div>
+        <button class="menu-btn" id="menuBtn">☰</button>
 
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#nosotros">Nosotros</a></li>
+            <li><a href="#productos">Productos</a></li>
+            <li><a href="#beneficios">Beneficios</a></li>
+            <li><a href="#galeria">Galería</a></li>
+            <li><a href="#equipo">Equipo</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
 
-<ul>
-
-<li><a href="#inicio">Inicio</a></li>
-
-<li><a href="#nosotros">Nosotros</a></li>
-
-<li><a href="#productos">Productos</a></li>
-
-<li><a href="#beneficios">Beneficios</a></li>
-
-<li><a href="#galeria">Galería</a></li>
-
-<li><a href="#equipo">Equipo</a></li>
-
-<li><a href="#contacto">Contacto</a></li>
-
-</ul>
-
-
-</nav>
+    </nav>
 
 </header>
 
 
+<main>
 
 <!-- INICIO -->
 
-<section id="inicio" class="inicio">
+<section id="inicio" class="hero">
 
+    <div class="hero-content">
 
-<div class="contenido">
+        <span class="tag">
+            🌾 Emprendimiento andino
+        </span>
 
+        <h1>
+            Nutrición que nace
+            <span>de los Andes</span>
+        </h1>
 
-<h2>
-Nutrición que nace de los Andes
-</h2>
+        <p>
+            Descubre una nueva manera de disfrutar
+            la quinua mediante productos deliciosos,
+            nutritivos e innovadores.
+        </p>
 
+        <div class="hero-buttons">
 
-<p>
-Descubre productos deliciosos elaborados con quinua,
-una alternativa saludable con tradición andina.
-</p>
+            <a href="#productos" class="btn btn-primary">
+                Ver productos
+            </a>
 
+            <a href="#nosotros" class="btn btn-secondary">
+                Conócenos
+            </a>
 
-<a href="#productos">
-Ver productos
-</a>
+        </div>
 
+    </div>
 
-</div>
-
+    <div class="hero-image">
+        <img src="img/portada.jpg" alt="Productos Quinova">
+    </div>
 
 </section>
-
-
-
 
 
 <!-- NOSOTROS -->
 
-<section id="nosotros">
+<section id="nosotros" class="section">
+
+    <div class="section-title">
+
+        <span>CONÓCENOS</span>
+
+        <h2>
+            Somos <strong>Quinova</strong>
+        </h2>
+
+        <p>
+            Un emprendimiento que busca darle
+            un nuevo sabor a la quinua.
+        </p>
+
+    </div>
 
 
-<h2>
-¿Quiénes somos?
-</h2>
+    <div class="about-grid">
 
+        <div class="about-image">
+            <img src="img/aida.jpg" alt="Publicidad Quinova">
+        </div>
 
-<p>
+        <div class="about-content">
 
-Quinova es un emprendimiento dedicado a crear
-productos de repostería a base de quinua,
-combinando nutrición, sabor e innovación.
+            <h3>
+                Sabor, nutrición e innovación
+            </h3>
 
-</p>
+            <p>
+                Quinova nace con la idea de aprovechar
+                uno de los alimentos más representativos
+                de los Andes: la quinua.
+            </p>
 
+            <p>
+                Creamos productos de repostería que
+                combinan el sabor que todos disfrutamos
+                con las cualidades nutricionales de
+                este ingrediente andino.
+            </p>
+
+            <div class="about-points">
+
+                <div>
+                    <span>🌾</span>
+                    <p>Ingrediente andino</p>
+                </div>
+
+                <div>
+                    <span>💚</span>
+                    <p>Propuesta saludable</p>
+                </div>
+
+                <div>
+                    <span>✨</span>
+                    <p>Innovación y sabor</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
 
 </section>
-
-
-
 
 
 <!-- PRODUCTOS -->
 
-<section id="productos">
+<section id="productos" class="section products-section">
+
+    <div class="section-title">
+
+        <span>DESCUBRE</span>
+
+        <h2>Nuestros productos</h2>
+
+        <p>
+            Deliciosas opciones elaboradas
+            con el toque especial de Quinova.
+        </p>
+
+    </div>
 
 
-<h2>
-Nuestros productos
-</h2>
+    <div class="products-grid">
+
+        <article class="product-card">
+
+            <div class="product-image">
+                <img src="img/producto1.jpg" alt="Queque de quinua">
+            </div>
+
+            <div class="product-info">
+
+                <span class="product-number">01</span>
+
+                <h3>Queque de quinua</h3>
+
+                <p>
+                    Suave, delicioso y elaborado
+                    con quinua.
+                </p>
+
+            </div>
+
+        </article>
 
 
+        <article class="product-card">
 
-<div class="tarjetas">
+            <div class="product-image">
+                <img src="img/producto2.jpg" alt="Galletas de quinua">
+            </div>
 
+            <div class="product-info">
 
-<div class="tarjeta">
+                <span class="product-number">02</span>
 
-<img src="img/banner.jpg">
+                <h3>Galletas de quinua</h3>
 
-<h3>
-Queques de quinua
-</h3>
+                <p>
+                    Una alternativa deliciosa
+                    para disfrutar en cualquier momento.
+                </p>
 
-<p>
-Suaves, nutritivos y deliciosos.
-</p>
+            </div>
 
-</div>
-
-
-
-
-<div class="tarjeta">
-
-<img src="img/banner.jpg">
-
-<h3>
-Galletas de quinua
-</h3>
-
-<p>
-Una opción saludable para disfrutar.
-</p>
-
-</div>
+        </article>
 
 
+        <article class="product-card">
 
+            <div class="product-image">
+                <img src="img/producto3.jpg" alt="Postres Quinova">
+            </div>
 
-<div class="tarjeta">
+            <div class="product-info">
 
-<img src="img/banner.jpg">
+                <span class="product-number">03</span>
 
-<h3>
-Otros postres
-</h3>
+                <h3>Otros postres</h3>
 
-<p>
-El sabor de los Andes en cada producto.
-</p>
+                <p>
+                    Nuevas ideas y sabores
+                    nacidos de nuestra creatividad.
+                </p>
 
-</div>
+            </div>
 
+        </article>
 
-</div>
-
+    </div>
 
 </section>
-
-
-
 
 
 <!-- BENEFICIOS -->
 
+<section id="beneficios" class="section benefits-section">
 
-<section id="beneficios">
+    <div class="section-title light">
 
+        <span>LA QUINUA</span>
 
-<h2>
-Beneficios de la quinua
-</h2>
+        <h2>¿Por qué elegirla?</h2>
 
-
-<div class="tarjetas">
-
-
-<div class="tarjeta">
-
-<h3>
-🌱 Natural
-</h3>
-
-<p>
-Ingrediente andino con gran valor nutricional.
-</p>
-
-</div>
+    </div>
 
 
+    <div class="benefits-grid">
 
-<div class="tarjeta">
+        <div class="benefit">
+            <div class="benefit-icon">🌾</div>
+            <h3>Producto andino</h3>
+            <p>
+                La quinua forma parte de la tradición
+                alimentaria de los Andes.
+            </p>
+        </div>
 
-<h3>
-💪 Energía
-</h3>
+        <div class="benefit">
+            <div class="benefit-icon">💪</div>
+            <h3>Nutritiva</h3>
+            <p>
+                Es un alimento reconocido por
+                su aporte nutricional.
+            </p>
+        </div>
 
-<p>
-Aporta nutrientes para tu día.
-</p>
+        <div class="benefit">
+            <div class="benefit-icon">❤️</div>
+            <h3>Deliciosa</h3>
+            <p>
+                En Quinova buscamos convertir
+                la nutrición en una experiencia agradable.
+            </p>
+        </div>
 
-</div>
+        <div class="benefit">
+            <div class="benefit-icon">✨</div>
+            <h3>Innovadora</h3>
+            <p>
+                Transformamos un ingrediente tradicional
+                en nuevas propuestas.
+            </p>
+        </div>
 
-
-
-<div class="tarjeta">
-
-<h3>
-❤️ Saludable
-</h3>
-
-<p>
-Una alimentación rica y equilibrada.
-</p>
-
-</div>
-
-
-</div>
-
+    </div>
 
 </section>
-
-
-
-
 
 
 <!-- GALERÍA -->
 
+<section id="galeria" class="section">
 
-<section id="galeria">
+    <div class="section-title">
 
+        <span>QUINOVA</span>
 
-<h2>
-Galería Quinova
-</h2>
+        <h2>Nuestra galería</h2>
 
+        <p>
+            Conoce un poco más de nuestro emprendimiento.
+        </p>
 
-<div class="galeria">
-
-
-<img src="img/portada.jpg">
-
-
-<img src="img/banner.jpg">
+    </div>
 
 
-</div>
+    <div class="gallery-grid">
 
+        <div class="gallery-item large">
+            <img src="img/portada.jpg" alt="Quinova">
+            <div class="gallery-overlay">
+                <span>Quinova</span>
+            </div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="img/aida.jpg" alt="Publicidad Quinova">
+            <div class="gallery-overlay">
+                <span>Publicidad</span>
+            </div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="img/producto1.jpg" alt="Producto Quinova">
+            <div class="gallery-overlay">
+                <span>Producto</span>
+            </div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="img/producto2.jpg" alt="Producto de quinua">
+            <div class="gallery-overlay">
+                <span>Sabor andino</span>
+            </div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="img/producto3.jpg" alt="Postre Quinova">
+            <div class="gallery-overlay">
+                <span>Creatividad</span>
+            </div>
+        </div>
+
+    </div>
 
 </section>
-
-
-
-
 
 
 <!-- EQUIPO -->
 
+<section id="equipo" class="section team-section">
 
-<section id="equipo">
+    <div class="section-title">
+
+        <span>NUESTRO EQUIPO</span>
+
+        <h2>Las personas detrás de Quinova</h2>
+
+    </div>
 
 
-<h2>
-Nuestro equipo
-</h2>
+    <div class="team-grid">
 
+        <div class="team-card">
+            <div class="team-avatar">R</div>
+            <h3>Robert Jhair De la Cruz Cordero</h3>
+            <p>Integrante del emprendimiento</p>
+        </div>
 
-<p>
+        <div class="team-card">
+            <div class="team-avatar">Y</div>
+            <h3>Yaretzy Rosario Laines Palomino</h3>
+            <p>Integrante del emprendimiento</p>
+        </div>
 
-Robert Jhair De la Cruz Cordero<br>
+        <div class="team-card">
+            <div class="team-avatar">A</div>
+            <h3>Angie Nickol Huamán León</h3>
+            <p>Integrante del emprendimiento</p>
+        </div>
 
-Yaretzy Rosario Laines Palomino<br>
+        <div class="team-card">
+            <div class="team-avatar">N</div>
+            <h3>Nícol Antonia Yaranga Quispe</h3>
+            <p>Integrante del emprendimiento</p>
+        </div>
 
-Angie Nickol Huamán León<br>
+        <div class="team-card">
+            <div class="team-avatar">M</div>
+            <h3>Mildret Jeri Laura</h3>
+            <p>Integrante del emprendimiento</p>
+        </div>
 
-Nícol Antonia Yaranga Quispe<br>
-
-Mildret Jeri Laura
-
-</p>
-
+    </div>
 
 </section>
-
-
-
-
 
 
 <!-- CONTACTO -->
 
+<section id="contacto" class="section contact-section">
 
-<section id="contacto">
+    <div class="contact-container">
+
+        <div class="contact-info">
+
+            <span>HABLEMOS</span>
+
+            <h2>
+                ¿Quieres conocer más de Quinova?
+            </h2>
+
+            <p>
+                Escríbenos y conoce nuestra propuesta,
+                nuestros productos y nuestro emprendimiento.
+            </p>
 
 
-<h2>
-Contacto
-</h2>
+            <div class="contact-options">
+
+                <a
+                    class="contact-option"
+                    href="https://wa.me/51912124850"
+                    target="_blank">
+
+                    <span>📱</span>
+
+                    <div>
+                        <strong>WhatsApp</strong>
+                        <p>+51 912 124 850</p>
+                    </div>
+
+                </a>
 
 
-<p>
-📱 WhatsApp: +51 900 000 000
-</p>
+                <div class="contact-option">
+
+                    <span>🌾</span>
+
+                    <div>
+                        <strong>Quinova</strong>
+                        <p>Nutrición que nace de los Andes</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
 
 
-<p>
-📧 quinova@gmail.com
-</p>
+        <form id="contactForm" class="contact-form">
 
+            <h3>Envíanos un mensaje</h3>
+
+            <label for="nombre">Nombre</label>
+
+            <input
+                type="text"
+                id="nombre"
+                placeholder="Escribe tu nombre"
+                required>
+
+
+            <label for="correo">Correo electrónico</label>
+
+            <input
+                type="email"
+                id="correo"
+                placeholder="tucorreo@gmail.com"
+                required>
+
+
+            <label for="mensaje">Mensaje</label>
+
+            <textarea
+                id="mensaje"
+                rows="5"
+                placeholder="Escribe tu mensaje..."
+                required></textarea>
+
+
+            <button
+                type="submit"
+                class="btn btn-primary">
+
+                Enviar mensaje
+
+            </button>
+
+            <p id="formMessage" class="form-message"></p>
+
+        </form>
+
+    </div>
 
 </section>
 
+</main>
 
 
+<!-- WHATSAPP -->
 
+<a
+    href="https://wa.me/51912124850?text=Hola%20Quinova%2C%20quisiera%20conocer%20más%20sobre%20sus%20productos."
+    class="whatsapp-button"
+    target="_blank"
+    aria-label="Contactar con Quinova por WhatsApp">
 
-<!-- BOTÓN WHATSAPP -->
-
-
-<a 
-href="https://wa.me/51900000000" 
-class="whatsapp">
-
-💬
+    💬
 
 </a>
 
 
+<!-- FOOTER -->
+
+<footer class="footer">
+
+    <div class="footer-content">
+
+        <div>
+
+            <h2>🌾 QUINOVA</h2>
+
+            <p>
+                Nutrición que nace de los Andes.
+            </p>
+
+        </div>
 
 
+        <div class="footer-links">
+
+            <a href="#inicio">Inicio</a>
+            <a href="#productos">Productos</a>
+            <a href="#galeria">Galería</a>
+            <a href="#contacto">Contacto</a>
+
+        </div>
+
+    </div>
 
 
-<footer>
+    <div class="footer-bottom">
 
+        <p>
+            © <span id="year"></span> Quinova.
+            Todos los derechos reservados.
+        </p>
 
-<p>
-© 2026 Quinova | Nutrición que nace de los Andes
-</p>
-
+    </div>
 
 </footer>
 
 
-
-
 <script src="script.js"></script>
 
-
 </body>
-
 </html>
