@@ -1,130 +1,281 @@
-/* =========================
-   MENÚ PARA CELULAR
-========================= */
+/* ==================================================
+   QUINOVA - SCRIPT PRINCIPAL
+================================================== */
 
-const menuBtn = document.getElementById("menuBtn");
-const navLinks = document.getElementById("navLinks");
+document.addEventListener("DOMContentLoaded", function () {
 
-if (menuBtn && navLinks) {
+    /* ==================================================
+       AÑO AUTOMÁTICO DEL FOOTER
+    ================================================== */
 
-    menuBtn.addEventListener("click", () => {
-        navLinks.classList.toggle("active");
-    });
+    const year = document.getElementById("year");
 
-    navLinks.querySelectorAll("a").forEach(link => {
-
-        link.addEventListener("click", () => {
-            navLinks.classList.remove("active");
-        });
-
-    });
-}
+    if (year) {
+        year.textContent = new Date().getFullYear();
+    }
 
 
-/* =========================
-   AÑO AUTOMÁTICO
-========================= */
+    /* ==================================================
+       NAVEGACIÓN SUAVE
+    ================================================== */
 
-const year = document.getElementById("year");
+    const links = document.querySelectorAll('a[href^="#"]');
 
-if (year) {
-    year.textContent = new Date().getFullYear();
-}
+    links.forEach(function (link) {
 
+        link.addEventListener("click", function (event) {
 
-/* =========================
-   ANIMACIONES
-========================= */
+            const targetId = this.getAttribute("href");
 
-const elements = document.querySelectorAll(
-    ".section-title, .about-grid, .product-card, .benefit, .gallery-item, .team-card, .contact-container"
-);
+            if (!targetId || targetId === "#") {
+                return;
+            }
 
-const observer = new IntersectionObserver(
-    (entries) => {
+            const target = document.querySelector(targetId);
 
-        entries.forEach(entry => {
+            if (target) {
 
-            if (entry.isIntersecting) {
+                event.preventDefault();
 
-                entry.target.classList.add("reveal");
-                entry.target.classList.add("active");
+                target.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start"
+                });
 
-                observer.unobserve(entry.target);
             }
 
         });
 
-    },
-    {
-        threshold: 0.12
-    }
-);
+    });
 
 
-elements.forEach(element => {
+    /* ==================================================
+       ANIMACIÓN AL APARECER LAS SECCIONES
+    ================================================== */
 
-    element.classList.add("reveal");
-
-    observer.observe(element);
-
-});
-
-
-/* =========================
-   FORMULARIO DE CONTACTO
-========================= */
-
-const contactForm =
-    document.getElementById("contactForm");
-
-const formMessage =
-    document.getElementById("formMessage");
+    const elements = document.querySelectorAll(
+        ".info-card, .product-card, .benefit-card, .team-card, .gallery-item, .innovation, .model-card, .customer-card"
+    );
 
 
-if (contactForm) {
+    const observer = new IntersectionObserver(
+        function (entries) {
 
-    contactForm.addEventListener("submit", (event) => {
+            entries.forEach(function (entry) {
 
-        event.preventDefault();
+                if (entry.isIntersecting) {
 
-        const nombre =
-            document.getElementById("nombre").value.trim();
+                    entry.target.classList.add("visible");
 
-        const correo =
-            document.getElementById("correo").value.trim();
+                    observer.unobserve(entry.target);
 
-        const mensaje =
-            document.getElementById("mensaje").value.trim();
+                }
 
+            });
 
-        if (!nombre || !correo || !mensaje) {
-
-            formMessage.textContent =
-                "Completa todos los campos.";
-
-            return;
+        },
+        {
+            threshold: 0.12
         }
+    );
 
 
-        const texto =
-            "Hola Quinova.%0A%0A" +
-            "Nombre: " + encodeURIComponent(nombre) +
-            "%0ACorreo: " + encodeURIComponent(correo) +
-            "%0AMensaje: " + encodeURIComponent(mensaje);
+    elements.forEach(function (element) {
 
+        element.style.opacity = "0";
 
-        window.open(
-            "https://wa.me/51912124850?text=" + texto,
-            "_blank"
-        );
+        element.style.transform = "translateY(20px)";
 
+        element.style.transition =
+            "opacity 0.6s ease, transform 0.6s ease";
 
-        formMessage.textContent =
-            "Abriendo WhatsApp...";
-
-        contactForm.reset();
+        observer.observe(element);
 
     });
 
-}
+
+    /* ==================================================
+       EFECTO DE APARICIÓN
+    ================================================== */
+
+    const style = document.createElement("style");
+
+    style.textContent = `
+
+        .info-card.visible,
+        .product-card.visible,
+        .benefit-card.visible,
+        .team-card.visible,
+        .gallery-item.visible,
+        .innovation.visible,
+        .model-card.visible,
+        .customer-card.visible {
+
+            opacity: 1 !important;
+
+            transform: translateY(0) !important;
+
+        }
+
+    `;
+
+    document.head.appendChild(style);
+
+
+    /* ==================================================
+       CERRAR MENSAJES DE ERROR DE IMÁGENES
+    ================================================== */
+
+    const images = document.querySelectorAll("img");
+
+    images.forEach(function (image) {
+
+        image.addEventListener("error", function () {
+
+            console.warn(
+                "No se pudo cargar la imagen:",
+                image.getAttribute("src")
+            );
+
+        });
+
+    });
+
+
+    /* ==================================================
+       BOTONES DE WHATSAPP
+    ================================================== */
+
+    const whatsappNumber = "51912124850";
+
+    const whatsappLinks = document.querySelectorAll(
+        'a[href*="wa.me"]'
+    );
+
+
+    whatsappLinks.forEach(function (link) {
+
+        link.addEventListener("click", function () {
+
+            console.log(
+                "Abriendo WhatsApp de Quinova:",
+                whatsappNumber
+            );
+
+        });
+
+    });
+
+
+    /* ==================================================
+       FORMULARIO DE CONTACTO
+    ================================================== */
+
+    const form = document.querySelector(".contact-form");
+
+    if (form) {
+
+        form.addEventListener("submit", function () {
+
+            const button = form.querySelector(
+                'button[type="submit"]'
+            );
+
+            if (button) {
+
+                button.textContent = "Enviando...";
+
+                button.disabled = true;
+
+            }
+
+        });
+
+    }
+
+
+    /* ==================================================
+       BOTÓN DE WHATSAPP FLOTANTE
+    ================================================== */
+
+    const floatingWhatsapp =
+        document.querySelector(".whatsapp-floating");
+
+    if (floatingWhatsapp) {
+
+        floatingWhatsapp.setAttribute(
+            "title",
+            "Escribir a Quinova por WhatsApp"
+        );
+
+    }
+
+
+    /* ==================================================
+       DETECTAR SECCIÓN ACTUAL
+    ================================================== */
+
+    const sections = document.querySelectorAll(
+        "main section[id]"
+    );
+
+    const navigationLinks = document.querySelectorAll(
+        ".nav a"
+    );
+
+
+    const sectionObserver = new IntersectionObserver(
+        function (entries) {
+
+            entries.forEach(function (entry) {
+
+                if (entry.isIntersecting) {
+
+                    navigationLinks.forEach(function (link) {
+
+                        link.classList.remove("active");
+
+                    });
+
+
+                    const activeLink =
+                        document.querySelector(
+                            '.nav a[href="#' +
+                            entry.target.id +
+                            '"]'
+                        );
+
+
+                    if (activeLink) {
+
+                        activeLink.classList.add("active");
+
+                    }
+
+                }
+
+            });
+
+        },
+        {
+            rootMargin: "-30% 0px -60% 0px"
+        }
+    );
+
+
+    sections.forEach(function (section) {
+
+        sectionObserver.observe(section);
+
+    });
+
+
+    /* ==================================================
+       MENSAJE EN CONSOLA
+    ================================================== */
+
+    console.log(
+        "🌾 Quinova - Página cargada correctamente."
+    );
+
+});
